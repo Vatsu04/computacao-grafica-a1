@@ -54,7 +54,7 @@ void desenhar() {
 
     // --- 2. Sol Detalhado e Giratório ---
     glPushMatrix();
-    glTranslatef(-2.5f, 2.0f, -14.0f);
+    glTranslatef(-2.5f, 2.0f, -2.0f);
     glRotatef(anguloDeRotacao, 0.0f, 0.0f, 1.0f);
 
         const float PI = 3.1415926535;
