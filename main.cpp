@@ -19,32 +19,42 @@ void desenharCasa() {
     // Parede da Casa (Branco)
     glColor3f(1.0f, 1.0f, 1.0f);
     glBegin(GL_QUADS);
-        glVertex2f(-0.4f, -0.6f); glVertex2f(0.4f, -0.6f);
-        glVertex2f(0.4f, 0.2f); glVertex2f(-0.4f, 0.2f);
+        glVertex2f(-0.4f, -0.6f);
+		 glVertex2f(0.4f, -0.6f);
+        glVertex2f(0.4f, 0.2f); 
+		glVertex2f(-0.4f, 0.2f);
     glEnd();
 
     // Telhado e Chaminé (Marrom)
     glColor3f(0.5f, 0.25f, 0.0f);
     glBegin(GL_TRIANGLES);
-        glVertex2f(-0.4f, 0.2f); glVertex2f(0.4f, 0.2f); glVertex2f(0.0f, 0.6f);
+        glVertex2f(-0.4f, 0.2f); 
+		glVertex2f(0.4f, 0.2f);
+		 glVertex2f(0.0f, 0.6f);
     glEnd();
     glBegin(GL_QUADS);
-        glVertex2f(-0.3f, 0.3f); glVertex2f(-0.15f, 0.45f);
-        glVertex2f(-0.15f, 0.75f); glVertex2f(-0.3f, 0.75f);
+        glVertex2f(-0.3f, 0.3f);
+		 glVertex2f(-0.15f, 0.45f);
+        glVertex2f(-0.15f, 0.75f);
+		 glVertex2f(-0.3f, 0.75f);
     glEnd();
 
     // Porta (Vermelho) - Desenhada um pouco à frente (Z=0.01)
     glColor3f(1.0f, 0.0f, 0.0f);
     glBegin(GL_QUADS);
-        glVertex3f(-0.3f, -0.6f, 0.01f); glVertex3f(-0.1f, -0.6f, 0.01f);
-        glVertex3f(-0.1f, -0.2f, 0.01f); glVertex3f(-0.3f, -0.2f, 0.01f);
+        glVertex3f(-0.3f, -0.6f, 0.01f);
+		 glVertex3f(-0.1f, -0.6f, 0.01f);
+        glVertex3f(-0.1f, -0.2f, 0.01f);
+		 glVertex3f(-0.3f, -0.2f, 0.01f);
     glEnd();
 
     // Janela (Azul) - Desenhada um pouco à frente (Z=0.01)
     glColor3f(0.0f, 0.0f, 1.0f);
     glBegin(GL_QUADS);
-        glVertex3f(0.1f, -0.1f, 0.01f); glVertex3f(0.3f, -0.1f, 0.01f);
-        glVertex3f(0.3f, 0.1f, 0.01f); glVertex3f(0.1f, 0.1f, 0.01f);
+        glVertex3f(0.1f, -0.1f, 0.01f);
+		 glVertex3f(0.3f, -0.1f, 0.01f);
+        glVertex3f(0.3f, 0.1f, 0.01f);
+		 glVertex3f(0.1f, 0.1f, 0.01f);
     glEnd();
 }
 
@@ -72,9 +82,11 @@ void desenhar() {
     // --- Céu ---
     glBegin(GL_QUADS);
         glColor3f(0.1f, 0.1f, 0.4f);
-        glVertex3f(-15.0f, 8.0f, -15.0f); glVertex3f(15.0f, 8.0f, -15.0f);
+        glVertex3f(-15.0f, 10.0f, -15.0f); 
+		glVertex3f(15.0f, 10.0f, -15.0f);
         glColor3f(1.0f, 0.5f, 0.2f);
-        glVertex3f(15.0f, -1.0f, -15.0f); glVertex3f(-15.0f, -1.0f, -15.0f);
+        glVertex3f(15.0f, -1.0f, -15.0f);
+		 glVertex3f(-15.0f, -1.0f, -15.0f);
     glEnd();
 
     // --- Sol ---
@@ -104,20 +116,28 @@ void desenhar() {
     // --- Montanhas ---
     glColor3f(0.2f, 0.15f, 0.3f);
     glBegin(GL_TRIANGLES);
-        glVertex3f(-6.0f, -1.0f, -10.0f); glVertex3f(-2.0f, 2.5f, -10.0f); glVertex3f(2.0f, -1.0f, -10.0f);
-        glVertex3f(0.0f, -1.0f, -10.0f); glVertex3f(4.0f, 3.0f, -10.0f); glVertex3f(8.0f, -1.0f, -10.0f);
+        glVertex3f(-6.0f, -1.0f, -10.0f); 
+		glVertex3f(-2.0f, 2.5f, -10.0f);
+		 glVertex3f(2.0f, -1.0f, -10.0f);
+        glVertex3f(0.0f, -1.0f, -10.0f);
+		 glVertex3f(4.0f, 3.0f, -10.0f);
+		  glVertex3f(8.0f, -1.0f, -10.0f);
     glEnd();
     glColor3f(0.3f, 0.25f, 0.4f);
     glBegin(GL_TRIANGLES);
-        glVertex3f(-4.0f, -1.0f, -8.0f); glVertex3f(1.0f, 4.0f, -8.0f); glVertex3f(6.0f, -1.0f, -8.0f);
+        glVertex3f(-4.0f, -1.0f, -8.0f);
+		 glVertex3f(1.0f, 4.0f, -8.0f); 
+		 glVertex3f(6.0f, -1.0f, -8.0f);
     glEnd();
 
     // --- Chão ---
     glBegin(GL_QUADS);
         glColor3f(0.1f, 0.4f, 0.1f);
-        glVertex3f(-15.0f, -1.0f, 5.0f); glVertex3f(15.0f, -1.0f, 5.0f);
+        glVertex3f(-15.0f, -1.0f, 5.0f); 
+		glVertex3f(15.0f, -1.0f, 5.0f);
         glColor3f(0.4f, 0.6f, 0.2f);
-        glVertex3f(15.0f, -1.0f, -15.0f); glVertex3f(-15.0f, -1.0f, -15.0f);
+        glVertex3f(15.0f, -1.0f, -15.0f);
+		 glVertex3f(-15.0f, -1.0f, -15.0f);
     glEnd();
     
     // --- NOVO: Estrada em Perspectiva ---
